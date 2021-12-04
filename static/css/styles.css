@@ -1,13 +1,16 @@
 body {
     background: #FAF1E6;
+    padding : 0px;
 
 }
-#menu {
-
+.bottom-address {
+    color: #2c5aab;
 }
-#address {
 
+.asteriskField {
+    display: none;
 }
-#carousel{
-
+label{
+    margin-bottom: 10%;
+    font-weight: bold;
 }

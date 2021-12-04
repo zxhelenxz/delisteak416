@@ -3,14 +3,13 @@ body {
     padding : 0px;
 
 }
-.bottom-address {
-    color: #2c5aab;
+#brand {
+    font-family: 'Orbitron', sans-serif;
 }
-
+#address {
+    color: #2c5aab;
+    background: aliceblue;
+}
 .asteriskField {
     display: none;
-}
-label{
-    margin-bottom: 10%;
-    font-weight: bold;
 }

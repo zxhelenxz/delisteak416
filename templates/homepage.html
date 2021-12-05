@@ -89,42 +89,44 @@
                 </div>
             </div>
         </div>
-        <div id="menu" class="shadow-lg p-3 mb-5">
-            <div class=" col-sm-12 text-center">
-                <h3 class="header display-3 ">Menu</h3>
+        <div id="menu">
+            <div class="shadow-lg pt-0 mb-5 text-center">
+                <h3 class="header  ">Menu</h3>
                 <img src="{% static 'images/menu.png' %}"
                      class=" my-4 w-75 h-25 shadow rounded border border-dark"
                      alt="menu image">
-                <div class="d-flex justify-content-around my-4 ">
-                    <button type="button"
-                            class="btn btn-secondary shadow p-3 mb-5 mx-1 fs-3 w-25 text-white btn-outline-danger">
-                        Appetizer
-                    </button>
-                    <button type="button"
-                            class="btn btn-secondary shadow p-3 mb-5 mx-1 fs-3 w-25 text-white btn-outline-danger">
-                        Salad
-                    </button>
-                    <button type="button"
-                            class="btn btn-secondary shadow p-3 mb-5 mx-1 fs-3 w-25 text-white btn-outline-danger">
-                        Main
-                        Dish
-                    </button>
-                    <button type="button"
-                            class="btn btn-secondary shadow p-3 mb-5 mx-1 fs-3 w-25 text-white btn-outline-danger">
-                        Dessert
-                    </button>
-                    <button type="button"
-                            class="btn btn-secondary shadow p-3 mb-5 mx-1 fs-3 w-25 text-white btn-outline-danger">
-                        Drink
-                    </button>
+                <div class="row">
+                    <div class="d-flex justify-content-around my-4 ">
+                        <button type="button"
+                                class="btn btn-secondary shadow p-3 mb-5 mx-1 fs-3 w-25 text-white btn-outline-danger">
+                            Appetizer
+                        </button>
+                        <button type="button"
+                                class="btn btn-secondary shadow p-3 mb-5 mx-1 fs-3 w-25 text-white btn-outline-danger">
+                            Salad
+                        </button>
+                        <button type="button"
+                                class="btn btn-secondary shadow p-3 mb-5 mx-1 fs-3 w-25 text-white btn-outline-danger">
+                            Main
+                            Dish
+                        </button>
+                        <button type="button"
+                                class="btn btn-secondary shadow p-3 mb-5 mx-1 fs-3 w-25 text-white btn-outline-danger">
+                            Dessert
+                        </button>
+                        <button type="button"
+                                class="btn btn-secondary shadow p-3 mb-5 mx-1 fs-3 w-25 text-white btn-outline-danger">
+                            Drink
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
         <div id="location">
-            <div class="mb-3 col-sm-12">
+            <div class=" col-sm-12 shadow-lg mb-5">
                 <div class="row g-0">
                     <div class="col-md-8">
-                        <h4 class="header display-3 text-center">Location</h4>
+                        <h4 class="header text-center">Location</h4>
                         <div class="row mt-5 fs-4">
                             <div class="col-6 text-center">
                                 <b>New Britain</b><br>
@@ -159,4 +161,26 @@
         <div class=" col-sm-12" id="review"></div>
         <div class=" col-sm-12" id="about"></div>
     </div>
+    <footer class="bg-warning mt-5 pt-4 pb-2 ">
+        <div class="container">
+            <div class="row justify-content-center mb-0 ">
+                <div class="d-flex justify-content-evenly w-75 fs-5 fw-bold">
+                    <a href="#menu" class="text-decoration-none link-secondary">Menu</a>
+                    <a href="#" class="text-decoration-none link-secondary">Reservation</a>
+                    <a href="{% url 'login' %}" class="text-decoration-none link-secondary">Sign In</a>
+                    <a href="{% url 'contact' %}" class="text-decoration-none link-secondary">Contact</a>
+                    <a href="/" class="text-decoration-none link-secondary">About</a>
+                </div>
+                <p class="text-center mt-2">Copyright @2021 | Designed With by <a
+                        href="https://github.com/taymcl/CS416_finalProject">Taylor and Thi Le</a></p>
+                <div class=" d-flex justify-content-evenly w-50">
+                    <a href="/"><i class="fab fa-facebook-f " target="_blank"></i></a>
+                    <a href="/"><i class="fab fa-twitter text-info" target="_blank"></i></a>
+                    <a href="/"><i class="fab fa-linkedin text-success" target="_blank"></i></a>
+                    <a href="/"><i class="fab fa-instagram text-danger" target="_blank"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 {% endblock %}

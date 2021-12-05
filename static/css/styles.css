@@ -3,6 +3,9 @@ body {
     padding : 0px;
 
 }
+#menu,#location,#review, #about{
+    background: aliceblue;
+}
 #brand {
     font-family: 'Orbitron', sans-serif;
 }
@@ -12,4 +15,13 @@ body {
 }
 .asteriskField {
     display: none;
+}
+.header {
+  padding: 3%;
+  text-align: center;
+  background: goldenrod;
+  color: white;
+  font-size: 3rem;
+    font-weight: bold;
+    font-family: 'Orbitron', sans-serif;
 }

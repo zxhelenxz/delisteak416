@@ -2,7 +2,7 @@ from django.contrib import messages
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.shortcuts import render, redirect
-from .forms import ContactForm
+from .forms import ContactForm, ReserveForm
 
 # Create your views here.
 from accounts.forms import ContactForm
@@ -40,11 +40,33 @@ def homepage(request):
     return render(request, 'homepage.html')
 
 
+def about_us(request):
+    return render(request, 'restaurant/about_us.html')
+
+
+def menu(request):
+    return render(request, 'restaurant/menu.html')
+
+
 def contact(request):
     form = ContactForm(request.POST or None)
     if request.method == 'POST':
-       if form.is_valid():
-        form.save()
-        return render(request, 'contact/thanks.html')
+        if form.is_valid():
+            form.save()
+            return render(request, 'contact/thanks.html')
     context = {'form': form}
     return render(request, 'contact/contact.html', context)
+
+
+def reservation(request):
+    reserve = ReserveForm.objects.all()
+    context = {'reserve': reserve}
+    return render(request, 'restaurant/reservation.html', context)
+
+
+def confirm_reservation(request):
+    form = ReserveForm(request.POST)
+    if form.is_valid():
+        form.save()
+        return redirect('reservation')
+    return render(request, 'restaurant/confirm_reservation.html')

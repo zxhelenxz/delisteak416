@@ -12,3 +12,8 @@ class ContactForm(forms.ModelForm):
             'email': forms.EmailInput(attrs={'class': 'form-control'}),
             'message': forms.Textarea(attrs={'class': 'form-control'}),
         }
+
+class ReserveForm(forms.ModelForm):
+    class Meta:
+        model = Reserve
+        fields = '__all__'

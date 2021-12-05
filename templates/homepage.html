@@ -161,19 +161,20 @@
         <div class=" col-sm-12" id="review"></div>
         <div class=" col-sm-12" id="about"></div>
     </div>
-    <footer class="bg-warning mt-5 pt-4 pb-2 ">
+    <footer class="bg-warning mt-5 pt-2  ">
         <div class="container">
             <div class="row justify-content-center mb-0 ">
                 <div class="d-flex justify-content-evenly w-75 fs-5 fw-bold">
                     <a href="#menu" class="text-decoration-none link-secondary">Menu</a>
-                    <a href="#" class="text-decoration-none link-secondary">Reservation</a>
+                    <a href="{% url 'reservation' %}" class="text-decoration-none link-secondary">Reservation</a>
                     <a href="{% url 'login' %}" class="text-decoration-none link-secondary">Sign In</a>
                     <a href="{% url 'contact' %}" class="text-decoration-none link-secondary">Contact</a>
-                    <a href="/" class="text-decoration-none link-secondary">About</a>
+                    <a href="{% url 'about' %}" class="text-decoration-none link-secondary">About</a>
                 </div>
-                <p class="text-center mt-2">Copyright @2021 | Designed With by <a
-                        href="https://github.com/taymcl/CS416_finalProject">Taylor and Thi Le</a></p>
                 <div class=" d-flex justify-content-evenly w-50">
+                <p class="text-center ">Copyright @2021 | Designed With by <a
+                        href="https://github.com/taymcl/CS416_finalProject">Taylor and Thi Le</a></p>
+
                     <a href="/"><i class="fab fa-facebook-f " target="_blank"></i></a>
                     <a href="/"><i class="fab fa-twitter text-info" target="_blank"></i></a>
                     <a href="/"><i class="fab fa-linkedin text-success" target="_blank"></i></a>

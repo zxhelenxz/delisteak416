@@ -7,3 +7,12 @@ class Contact(models.Model):
     last_name = models.CharField(max_length=50)
     email = models.EmailField()
     message = models.TextField()
+
+
+class Reserve(models.Model):
+    first_name = models.CharField(max_length=25)
+    last_name = models.CharField(max_length=25)
+    reserve_time = models.TimeField()
+    reserve_email = models.EmailField()
+    reserve_date = models.DateField()
+    reserve_party = models.IntegerField()

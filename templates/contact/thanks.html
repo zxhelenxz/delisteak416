@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+    Thank you
+{% endblock %}
+
+{% block body %}
+    <div id="myModal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header bg-secondary fs-4 text-white">
+                    <h5 class="modal-title ">Thank you for contacting us!</h5>
+                </div>
+                <div class="modal-body">
+                    <p>We will make sure to reach you as soon as possible.<br><br>
+                        Your interest at <span class="fw-bold text-secondary">DeliSteak</span> is extremely valuable to us. This will help us tailor
+                        solutions specifically for your needs.<br><br>
+                        Please continue to visit the site and offer additional recommendations.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <a class="text-decoration-none"href="/"><button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block script %}
+    <script src="{% static 'javascript/thank_you_modal.js' %}"></script>
+{% endblock %}

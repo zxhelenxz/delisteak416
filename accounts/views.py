@@ -1,11 +1,13 @@
 from django.contrib import messages
 from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
-from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
-
+from .forms import ContactForm
 
 # Create your views here.
+from accounts.forms import ContactForm
+
+
 def register_view(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
@@ -29,10 +31,20 @@ def login_view(request):
     return render(request, 'accounts/login.html', {'form': form})
 
 
+def logout_view(request):
+    logout(request)
+    return redirect('homepage')
+
+
 def homepage(request):
     return render(request, 'homepage.html')
 
 
-def logout_view(request):
-    logout(request)
-    return redirect('homepage')
+def contact(request):
+    form = ContactForm(request.POST or None)
+    if request.method == 'POST':
+       if form.is_valid():
+        form.save()
+        return render(request, 'contact/thanks.html')
+    context = {'form': form}
+    return render(request, 'contact/contact.html', context)

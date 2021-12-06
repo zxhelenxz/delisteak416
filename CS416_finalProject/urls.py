@@ -21,9 +21,9 @@ from accounts import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+path('', views.homepage, name='homepage'),
     path('account/', include('accounts.urls')),
-    path('', views.homepage, name='homepage'),
-    path('contact/', views.contact, name='contact'),
+path('contact/', include('contact.urls')),
     path('menu/', views.menu, name='menu'),
     path('aboutus/', views.about_us, name='about'),
     path('reservation/', include('reservations.urls')),

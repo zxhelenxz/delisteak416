@@ -22,10 +22,9 @@ def create_view(request):
             # Assign the current user as the user (i.e., owner) for each task
             form.instance.user = request.user
             form.save()
-            context = {'user': form.instance.user}
-            return render(request, 'reservation/confirm_reservation.html', context)
-    context = {'form': form}
-    return render(request, 'reservation/create_reservation.html', context)
+            # context = {'user': form.instance.user}
+            return render(request, 'reservation/confirm_reservation.html')
+    return render(request, 'reservation/create_reservation.html', {'form': form})
 
 
 @login_required(login_url='login')

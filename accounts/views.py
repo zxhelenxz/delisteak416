@@ -2,7 +2,6 @@
 from django.contrib.auth import login, logout
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.shortcuts import render, redirect
-from accounts.forms import ContactForm
 # Create your views here.
 
 
@@ -46,14 +45,7 @@ def menu(request):
     return render(request, 'menu.html')
 
 
-def contact(request):
-    form = ContactForm(request.POST or None)
-    if request.method == 'POST':
-        if form.is_valid():
-            form.save()
-            return render(request, 'contact/thanks.html')
-    context = {'form': form}
-    return render(request, 'contact/contact.html', context)
+
 
 
 

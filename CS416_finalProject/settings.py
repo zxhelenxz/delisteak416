@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'accounts.apps.AccountsConfig',
     'reservations.apps.ReservationsConfig',
+    'contact.apps.ContactConfig',
 ]
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 

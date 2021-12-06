@@ -9,13 +9,9 @@ from reservations.models import Reserve
 
 @login_required(login_url='login')
 def reservation_view(request):
-    if request.user is None:
-        messages.info(request,"Invalid credentials")
-        return redirect('login')
-    else:
-        reservation = Reserve.objects.filter(user=request.user)
-        context = {'reservations': reservation}
-        return render(request, 'reservation/reservation.html', context)
+    reservation = Reserve.objects.filter(user=request.user)
+    context = {'reservations': reservation}
+    return render(request, 'reservation/reservation.html', context)
 
 
 @login_required(login_url='login')

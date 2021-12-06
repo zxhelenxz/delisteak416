@@ -1,19 +1,40 @@
-{% extends 'base.html'%}
+{% extends 'base.html' %}
 
 {% block title %}
     Make Reservation
 {% endblock %}
 
 {% block body %}
-<div class = "container">
-    <div class = "row">
-        <form action="{% url 'create' %}" method="post">
-                {% csrf_token %}
-                <div class="input-group mb-3">
-                    <div class="form-control p-0">{{form.as_p}}</div>
+    <div class="row justify-content-center mt-5">
+        <div class="card col-6">
+            <div class="card-header text-center display-5  mt-3 bg-secondary text-white">
+                Make a reservation
+            </div>
+            <div class="card-body">
+                <form action="{% url 'create' %}" method="post">
+                    {% csrf_token %}
+                    <div class="input-group mb-3 d-block">
+                        <div class=" ">
+                            <h5>Time</h5>
+                            {{ form.time }}
+                        </div>
+                        <div class="">
+                            <h5>Date</h5>
+                            {{ form.date }}
+                        </div>
+                        <div class="">
+                            <h5>Number of guest</h5>
+                            {{ form.person }}
+                        </div>
+                        <div class="">
+                            <h5>Where you want to seat</h5>
+                            {{ form.table }}
+                        </div>
+                    </div>
                     <button class="btn btn-primary" type="submit">Make Reservation</button>
-                </div>
-        </form>
+                </form>
+            </div>
+        </div>
     </div>
-</div>
+
 {% endblock %}

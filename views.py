@@ -30,3 +30,7 @@ def confirm_reservation(request):
         return redirect('reservation')
 
     return render(request, 'restaurant/confirm_reservation.html')
+
+
+def menus(request):
+    return render(request, 'restaurant/menus.html')

@@ -1,25 +1,25 @@
 $("#happy_btn").click(function() {
     $('html, body').animate({
         scrollTop: $("#happy_hour").offset().top
-    }, 2000);
+    }, 1000);
 });
 $("#drink_btn").click(function() {
     $('html, body').animate({
         scrollTop: $("#drinks").offset().top
-    }, 2001);
+    }, 1001);
 });
 $("#app_btn").click(function() {
     $('html, body').animate({
         scrollTop: $("#apps").offset().top
-    }, 2002);
+    }, 1002);
 });
 $("#entree_btn").click(function() {
     $('html, body').animate({
         scrollTop: $("#entrees").offset().top
-    }, 2003);
+    }, 1003);
 });
 $("#dessert_btn").click(function() {
     $('html, body').animate({
         scrollTop: $("#desserts").offset().top
-    }, 2004);
+    }, 1004);
 });

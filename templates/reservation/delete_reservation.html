@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+
+{% block title %}
+    Make Reservation
+{% endblock %}
+
+{% block body %}
+    <div class="card">
+        <div class="card-header">
+            Cancel Reservation
+        </div>
+        <div class="card-body">
+            <form action="{% url 'delete' reservation.id %}" method="post">
+                {% csrf_token %}
+                <h5>Are you sure that you want to cancel on
+                    <span>{{ reservation.reservation_date }}</span>
+                    at <span>{{ reservation.reservation_time}}</span>?</h5>
+                <a class="btn btn-info" href="{% url 'reservation' %}">No, go back</a>
+                <input class="btn btn-danger" type="submit" value="Yes">
+            </form>
+        </div>
+    </div>
+{% endblock %}

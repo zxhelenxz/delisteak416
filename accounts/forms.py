@@ -13,7 +13,3 @@ class ContactForm(forms.ModelForm):
             'message': forms.Textarea(attrs={'class': 'form-control'}),
         }
 
-class ReserveForm(forms.ModelForm):
-    class Meta:
-        model = Reserve
-        fields = '__all__'

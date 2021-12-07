@@ -1,37 +1,48 @@
-{% extends 'base.html'%}
+{% extends 'base.html' %}
 
 {% block title %}
     Make Reservation
 {% endblock %}
 
 {% block body %}
-{#    {% for message in messages %}#}
-{#        <h3>{{ message }}</h3>#}
-{#    {% endfor %}#}
-    <div class="row input-group m-0">
+    {#    {% for message in messages %}#}
+    {#        <h3>{{ message }}</h3>#}
+    {#    {% endfor %}#}
+    <div class="btn btn-secondary d-flex justify-content-center">
+        <h3>Your reservations</h3>
+    </div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Date</th>
+            <th scope="col">Time</th>
+            <th scope="col">Number of guest</th>
+            <th scope="col">Table</th>
+            <th scope="col">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for reserve in reservations %}
+            <tr>
+                <th scope="row">{{ forloop.counter }}</th>
+                <td>{{ reserve.date }}</td>
+                <td>{{ reserve.time }}</td>
+                <td>{{ reserve.person }}</td>
+                <td>{{ reserve.table }}</td>
+                <td><a class="btn btn-primary btn-sm" href="{% url 'update' reserve.id %}">Update</a>
+                    <a class="btn btn-danger btn-sm" href="{% url 'delete' reserve.id %}">Delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+        <div class="row input-group d-flex justify-content-center">
         <form action="{% url 'create' %}" method="post">
             {% csrf_token %}
-            <div class="input-group mb-3">
+            <div class="input-group mb-3 ">
                 <button class="btn btn-primary " type="submit" id="button-addon2">Make a reservation</button>
             </div>
         </form>
     </div>
-    {% for reserve in reservations %}
-        <h1>Success</h1>
-            <div class="row">
-                <div class="col-sm-12 col-md-6">
-                    <p class="fw-bold">{{ reserve.user.first_name }}</p>
-                    <p class="fs-6 text-secondary">First Name:  {{ reserve.user.first_name }}</p>
-                    <p class="fs-6 text-secondary">Last Name:  {{ reserve.user.last_name }}</p>
-                    <p class="fs-6 text-secondary">Email:  {{ reserve.user.email }}</p>
-                    <p class="fs-6 text-secondary">Date: {{ reserve.date }} at {{ reserve.reservation_time }}</p>
-                    <p class="fs-6 text-secondary">Number of people: {{ reserve.person}}</p>
-                    <p class="fs-6 text-secondary">Kind of Table {{ reserve.table }}</p>
-                </div>
-                <div class="col-sm-12 col-md-6  text-start text-md-end">
-                    <a class="btn btn-primary btn-sm" href="{% url 'update' reserve.id %}">Update</a>
-                    <a class="btn btn-danger btn-sm" href="{% url 'delete' reserve.id %}">Delete</a>
-                </div>
-            </div>
-    {% endfor %}
 {% endblock %}

@@ -2,9 +2,9 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from reservations.forms import ReserveForm
+from reservations.models import Reserve
 
 # Create your views here.
-from reservations.models import Reserve
 
 
 @login_required(login_url='login')
@@ -18,12 +18,12 @@ def reservation_view(request):
 def create_view(request):
     form = ReserveForm(request.POST or None)
     if request.method == 'POST':
+        print(form.errors)
         if form.is_valid():
-            # Assign the current user as the user (i.e., owner) for each task
             form.instance.user = request.user
             form.save()
-            # context = {'user': form.instance.user}
-            return render(request, 'reservation/confirm_reservation.html')
+            context = {'user': form.instance.user}
+            return render(request, 'reservation/confirm_reservation.html',context)
     return render(request, 'reservation/create_reservation.html', {'form': form})
 
 

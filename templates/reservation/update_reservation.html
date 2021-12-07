@@ -1,13 +1,13 @@
 {% extends 'base.html'%}
-
+{% load crispy_forms_tags %}
 {% block title %}
     Make Reservation
 {% endblock %}
 
 {% block body %}
-    <div class="card">
-        <div class="card-header">
-            Change Reservation
+    <div class="card w-25  mx-auto  mt-5">
+        <div class="btn btn-secondary d-flex justify-content-center">
+            <h4>Change Reservation</h4>
         </div>
         <div class="card-body">
             <form method="post">
@@ -15,12 +15,11 @@
                 <div class="row">
                     <div class="col-9 ">
                         <div class="card-body px-0">
-                            <p class="card-title">Reservation</p>
-                            {{ form}}
+                            {{ form|crispy}}
                         </div>
                     </div>
                 </div>
-                <a class="btn btn-info " href="{% url 'reservation' %}"><-Go back</a>
+                <a class="btn btn-info " href="{% url 'reservation' %}"><i class="fas fa-arrow-circle-left"></i> Go back</a>
                 <button class="btn btn-primary " type="submit">Change</button>
             </form>
         </div>

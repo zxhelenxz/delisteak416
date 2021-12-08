@@ -45,9 +45,5 @@ def menu(request):
     return render(request, 'menu.html')
 
 
-
-
-
-
-
-
+def reviews(request):
+    return render(request, 'review.html')

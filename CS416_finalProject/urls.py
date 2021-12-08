@@ -27,4 +27,5 @@ path('contact/', include('contact.urls')),
     path('menu/', views.menu, name='menu'),
     path('aboutus/', views.about_us, name='about'),
     path('reservation/', include('reservations.urls')),
+    path('review/',views.reviews, name='review'),
 ]

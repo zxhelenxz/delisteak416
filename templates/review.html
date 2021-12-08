@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Reviews
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#newbritain"
+                        type="button" role="tab" aria-controls="home" aria-selected="true">New Britain
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#manchester"
+                        type="button" role="tab" aria-controls="profile" aria-selected="false">Manchester
+                </button>
+            </li>
+
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active bg-light" id="newbritain" role="tabpanel"
+                 aria-labelledby="home-tab"></div>
+            <div class="tab-pane fade" id="manchester" role="tabpanel" aria-labelledby="profile-tab"></div>
+        </div>
+    </div>
+{% endblock %}
+{% block script %}
+    <script>
+        $(document).ready(function () {
+                printreview('#newbritain', 'ChIJpeAV62ay54kR-3E8Z-hkKqk')
+                printreview('#manchester', 'ChIJV7ZNljpX5okRVs9iD4SnIWY')
+                function printreview(location, id) {
+                    $.ajax({
+                        url: 'https://cors-anywhere.herokuapp.com/https://maps.googleapis.com/maps/api/place/details/json?&fields=name%2Crating%2Creview%2Cprice_level%2Caddress_component&place_id=' + id + '&key=AIzaSyBb99R5Qzr_t3xzo34F3YHNCLrsNTUDgVE',
+                        dataType: 'json',
+                        success: function (data) {
+                            console.log(data);
+                            const result = data.result.reviews;
+                            $.each(data.result.reviews, function (i, review) {
+                                const name = review.author_name;
+                                const profile_photo_url = review.profile_photo_url;
+                                const rating = review.rating;
+                                const text = review.text;
+                                console.log(name, profile_photo_url, rating, text)
+                                let str = '<div class="card my-4 shadow">\n' +
+                                    '    <div class="card-header border border-dark">\n' +
+                                    '        <img src="' + profile_photo_url + '" width="40px" height="40px" alt="user_image"/>\n' +
+                                    '        <span>' + name + '</span>\n' +
+                                    '        <span id="rating' + i + '"> Rating :' + rating + '</span>\n' +
+                                    '    </div>\n' +
+                                    '    <div class="card-body">\n' +
+                                    '        <p class="card-text">' + text + '</p>\n' +
+                                    '    </div>\n' +
+                                    '</div>\n';
+                                $(location).append(str);
+                                ratingGenerator(location, parseInt(rating), i);
+                            })
+                        }
+                    });
+                };
+
+                function ratingGenerator(location, rating, index) {
+                    // 5-star rating generated via fa-star from fontAwesome
+                    for (let i = 0; i < 5; i++) {
+                        if (i < rating) {
+                            $(location + ' #rating' + index).append('<span class="fa fa-star checked"></span>');
+                        }
+                    }
+                }
+            }
+        )
+        ;
+    </script>
+{% endblock %}

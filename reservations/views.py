@@ -33,7 +33,7 @@ def delete_view(request, id):
     if request.method == 'POST':
         reservation.delete()
         return redirect('reservation')
-    return render(request, 'Reservation/delete_reservation.html', {'reservation': reservation})
+    return render(request, 'reservation/delete_reservation.html', {'reservation': reservation})
 
 
 @login_required(login_url='login')
@@ -43,4 +43,4 @@ def update_view(request, id):
     if form.is_valid():
         form.save()
         return redirect('reservation')
-    return render(request, 'Reservation/update_reservation.html', {'form': form})
+    return render(request, 'reservation/update_reservation.html', {'form': form})

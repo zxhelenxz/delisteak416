@@ -7,10 +7,39 @@
 {% block body %}
     <!--  END NAVBAR -->
     <h3 class="display-2 text-center m-5">About Us</h3>
-    <p class="display-6 m-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, ad autem commodi cum error eveniet illum, impedit ipsam libero nam nostrum qui repudiandae similique suscipit tempora veniam veritatis! Eveniet, voluptates?</p>
-    <br>
-    <div class="container">
-        <div class="">
-        </div>
+    <p class="display-6 m-5">DeliSteak first opened its doors in the late 1950's.
+        We started as a small local diner in the heart of Hartford, Connecticut, and have since expanded rapidly.
+        DeliSteak is committed to serving the community fresh, innovative dishes while trying to constantly expand and improve.
+        We are now located across 7 states along the East Coast and wish to expand further.
+        Come to visit us anytime at any of our locations, we promise you will not be disappointed!</p>
+    <div class="row">
+    <div class="text-center">
+        <img class="rounded" src="{% static 'images/restaurant_open.jpeg' %}" alt="open" width="1000">
     </div>
+</div>
+
+    <p class="display-6 text-center m-5">
+        <i>DeliSteak in 1956 vs Present Day</i>
+    </p>
+
+    <div class="row">
+    <div class="text-center">
+        <img class="rounded" src="{% static 'images/restaurant_success.jpeg' %}" alt="success" width="1000">
+    </div>
+</div>
+    <p class="display-6 text-center m-5">Besides dine-in, we also offer various take out options.
+        Using the information below you can order take-out or delivery from any of our 20 locations! Find a DeliSteak near you!</p>
+
+    <hr>
+<div class="container-lg m-5">
+  <p class="display-4 text-center m-5">Delivery Options Available:</p>
+<p class="display-6 text-center m-5">UberEats</p>
+<p class="display-6 text-center m-5 text-danger">DoorDash</p>
+<p class="display-6 text-center m-5 text-warning">GrubHub</p>
+<p class="display-6 text-center m-5 text-primary">PostMates</p>
+
+</div>
+
+
+
 {% endblock %}

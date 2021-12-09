@@ -7,7 +7,7 @@
 {% block body %}
 
     <h3 class="display-2 text-center m-5">Our Menu</h3>
-    <h6 class="display-6 m-5">Here you will find our menu, which ranges from contemporary American to Italian and other Eastern styles. Click on the part of the menu you wish to view. Our entire menus is also available for Togo through delivery and pickup options. See
+    <h6 class="display-6 m-5">Here you will find our menu, which includes a variety of different options. Click on the part of the menu you wish to view. Our entire menus is also available for Togo through delivery and pickup options. See
         <a href="{% url 'about' %}">here</a></h6>
     <div class="d-flex justify-content-around my-4">
             <button id="happy_btn" type="button" class="btn btn-warning shadow p-3 mb-5 ">Happy Hour and Specials</button>
@@ -32,6 +32,7 @@
     </div>
   </div>
 </div>
+<!-----------SPECIALS---------->
     <h3 id="happy_hour" class="display-2 text-center m-5">Happy Hour and Specials</h3>
     <p class ="display-6 text-center m-5 text-secondary">
         <i>Our current happy hour runs from 2pm-5pm and 8pm-10pm every day of the week!</i>
@@ -47,6 +48,11 @@
             </div>
             <div class = "col-6">
                 <p class ="display-6 m-5 text-secondary"><i>............................$5.50</i></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="text-center">
+                <img class="rounded" src="{% static 'images/pretzals.jpeg' %}" alt="pretzels" width="400">
             </div>
         </div>
         <div class="row">
@@ -76,11 +82,346 @@
         </div>
     </div>
     </div>
+    <!---------Drinks---------->
     <h3 id="drinks" class="display-2 text-center m-5">Drinks</h3>
+    <div class="container">
+        <div class = "row">
+            <div class="col">
+                <p class ="display-6 m-3 text-primary">Non-Alcoholic Drinks</p>
+            </div>
+        <div class="row">
+            <div class ="col-6">
+                <p class ="display-6 m-5 text-secondary">Sodas</p>
+            </div>
+            <div class = "col-6">
+                <p class ="display-6 m-5 text-secondary"><i>............................$2.50</i></p>
+            </div>
+        </div>
+        <div class = "row">
+        <div class="col">
+            <p class ="display-6 m-5 text-center text-secondary"><i>Coke, Sprite, Root Beer, Dr. Pepper, Fanta</i></p>
+        </div>
+        <div class = "row">
+        <div class="col">
+            <p class ="display-6 m-5 text-center text-secondary"><i>All sodas come with free refills</i></p>
+        </div>
+    </div>
+        <div class="row">
+            <div class ="col-6">
+                <p class ="display-6 m-5 text-secondary">Flavored Lemonades</p>
+            </div>
+            <div class = "col-6">
+                <p class ="display-6 m-5 text-secondary"><i>.............$3.00 ($0.50 refills)</i></p>
+            </div>
+        </div>
+        <div class="col">
+            <p class ="display-6 m-5 text-center text-secondary"><i>Strawberry, Mango, Pineapple, Guava, Raspberry</i></p>
+        </div>
+        <div class="row">
+            <div class ="col-6">
+                <p class ="display-6 m-5 text-secondary">Milkshakes</p>
+            </div>
+            <div class = "col-6">
+                <p class ="display-6 m-5 text-secondary"><i>.............$4.00 ($1.00 refills)</i></p>
+            </div>
+        </div>
+        <div class="col">
+            <p class ="display-6 m-5 text-center text-secondary"><i>Vanilla, Chocolate or Strawberry (with whip cream and cherry)</i></p>
+        </div>
+        <div class = "row">
+            <div class="col">
+                <p class ="display-6 m-3 text-primary">Draft Beer</p>
+            </div>
+        </div>
+         <div class="col">
+            <p class ="display-6 m-5 text-center text-secondary"><i>Draft Beers are served as 16oz glasses</i></p>
+        </div>
+        <div class="row">
+            <div class ="col-6">
+                <p class ="display-6 m-5 text-secondary">Bud Light</p>
+            </div>
+            <div class = "col-6">
+                <p class ="display-6 m-5 text-secondary"><i>............................$6.00</i></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class ="col-6">
+                <p class ="display-6 m-5 text-secondary">Coors Light</p>
+            </div>
+            <div class = "col-6">
+                <p class ="display-6 m-5 text-secondary"><i>............................$6.00</i></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class ="col-6">
+                <p class ="display-6 m-5 text-secondary">Lagunitas IPA</p>
+            </div>
+            <div class = "col-6">
+                <p class ="display-6 m-5 text-secondary"><i>............................$6.50</i></p>
+            </div>
+        </div>
+        <div class = "row">
+            <div class="col">
+                <p class ="display-6 m-3 text-primary">Bottle Beer</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class ="col-6">
+                <p class ="display-6 m-5 text-secondary">Budweiser</p>
+            </div>
+            <div class = "col-6">
+                <p class ="display-6 m-5 text-secondary"><i>............................$5.50</i></p>
+            </div>
+        </div>
+        </div>
+            <div class="row">
+            <div class ="col-6">
+                <p class ="display-6 m-5 text-secondary">Michelob Ultra</p>
+            </div>
+            <div class = "col-6">
+                <p class ="display-6 m-5 text-secondary"><i>............................$6.00</i></p>
+            </div>
+            </div>
+        </div>
+            <div class="row">
+            <div class ="col-6">
+                <p class ="display-6 m-5 text-secondary">Angry Orchard Apple Crisp</p>
+            </div>
+            <div class = "col-6">
+                <p class ="display-6 m-5 text-secondary"><i>............................$5.50</i></p>
+            </div>
+        </div>
+        <div class = "row">
+            <div class="col">
+                <p class ="display-6 m-3 text-primary">Wine</p>
+            </div>
+        </div>
+            <div class="col">
+            <p class ="display-6 m-5 text-center text-secondary"><i>Wine is served as 6oz glass</i></p>
+            </div>
+        <div class="row">
+            <div class ="col-6">
+                <p class ="display-6 m-5 text-secondary">Ecco Pinot Grigio</p>
+            </div>
+            <div class = "col-6">
+                <p class ="display-6 m-5 text-secondary"><i>............................$9.00</i></p>
+            </div>
+        </div>
+         <div class="row">
+            <div class ="col-6">
+                <p class ="display-6 m-5 text-secondary">Kendall Jackson Chardonnay</p>
+            </div>
+            <div class = "col-6">
+                <p class ="display-6 m-5 text-secondary"><i>............................$10.00</i></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class ="col-6">
+                <p class ="display-6 m-5 text-secondary">Cupcake Rose</p>
+            </div>
+            <div class = "col-6">
+                <p class ="display-6 m-5 text-secondary"><i>............................$8.00</i></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class ="col-6">
+                <p class ="display-6 m-5 text-secondary">Canyon Road Merlot</p>
+            </div>
+            <div class = "col-6">
+                <p class ="display-6 m-5 text-secondary"><i>............................$10.00</i></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class ="col-6">
+                <p class ="display-6 m-5 text-secondary">Josh Cellars Cabernet</p>
+            </div>
+            <div class = "col-6">
+                <p class ="display-6 m-5 text-secondary"><i>............................$9.50</i></p>
+            </div>
+        </div>
+        <div class = "row">
+            <div class="col">
+                <p class ="display-6 m-3 text-primary">Signature Cocktails</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class ="col-6">
+                <p class ="display-6 m-5 text-secondary">Mai-Tai Trio</p>
+            </div>
+            <div class = "col-6">
+                <p class ="display-6 m-5 text-secondary"><i>Three mini mai-tai's, two are traditional and one is a mango mai-tai. Made with malibu, pineapple, cherry, and dark rum</i></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="text-center">
+                <img class="rounded" src="{% static 'images/mai_tai_trio.jpeg' %}" alt="mai-tai" width="400">
+            </div>
+        </div>
+            <div class="row">
+            <div class ="col-6">
+                <p class ="display-6 m-5 text-secondary">Long Island Iced Tea</p>
+            </div>
+            <div class = "col-6">
+                <p class ="display-6 m-5 text-secondary"><i>Light rum, vodka, gin, and triple sec with a splash of sour topped with coke</i></p>
+            </div>
+            </div>
+            <div class="row">
+            <div class ="col-6">
+                <p class ="display-6 m-5 text-secondary">Citron Punch</p>
+            </div>
+            <div class = "col-6">
+                <p class ="display-6 m-5 text-secondary"><i>Absolute Citron mixed with orange juice, cranberry, and pineapple</i></p>
+            </div>
+        </div>
+    </div>
+    <!--------APPS------------>
     <h3 id="apps" class="display-2 text-center m-5">Appetizers</h3>
+    <div class="row">
+    <div class ="col-6">
+        <p class ="display-6 m-5 text-secondary">Giant Pretzels</p>
+    </div>
+    <div class = "col-6">
+        <p class ="display-6 m-5 text-secondary"><i>............................$11.00</i></p>
+    </div>
+    </div>
+    <div class="row">
+    <div class ="col-6">
+        <p class ="display-6 m-5 text-secondary">Fried Mozzarella Balls</p>
+    </div>
+    <div class = "col-6">
+        <p class ="display-6 m-5 text-secondary"><i>............................$12.00</i></p>
+    </div>
+</div>
+    <div class="row">
+    <div class="text-center">
+        <img class="rounded" src="{% static 'images/loaded_nachos.jpeg' %}" alt="nachos" width="400">
+    </div>
+</div>
+    <div class="row">
+    <div class ="col-6">
+        <p class ="display-6 m-5 text-secondary">Loaded Nachos</p>
+    </div>
+    <div class = "col-6">
+        <p class ="display-6 m-5 text-secondary"><i>............................$14.00</i></p>
+    </div>
+</div>
+    <div class="row">
+    <div class="text-center">
+        <img class="rounded" src="{% static 'images/french_onion_soup.jpg' %}" alt="fr soup" width="400">
+    </div>
+</div>
+    <div class="row">
+    <div class ="col-6">
+        <p class ="display-6 m-5 text-secondary">French Onion Soup</p>
+    </div>
+    <div class = "col-6">
+        <p class ="display-6 m-5 text-secondary"><i>............................$8.00</i></p>
+    </div>
+</div>
+    <div class="row">
+    <div class ="col-6">
+        <p class ="display-6 m-5 text-secondary">Pineapple Cucumber Salad</p>
+    </div>
+    <div class = "col-6">
+        <p class ="display-6 m-5 text-secondary"><i>............................$7.00</i></p>
+    </div>
+</div>
+    <div class="row">
+    <div class="text-center">
+        <img class="rounded" src="{% static 'images/pineapple_cuke_salad.jpeg' %}" alt="pineapple cuke salad" width="400">
+    </div>
+</div>
+    <!--------ENTREES--------->
     <h3 id="entrees" class="display-2 text-center m-5">Entrees</h3>
+    <div class="col">
+<p class ="display-6 m-5 text-center text-secondary"><i>All entrees feature a free side</i></p>
+</div>
+    <div class="row">
+    <div class ="col-6">
+        <p class ="display-6 m-5 text-secondary">Chicken Alfredo Pasta</p>
+    </div>
+    <div class = "col-6">
+        <p class ="display-6 m-5 text-secondary"><i>............................$9.50</i></p>
+    </div>
+</div>
+    <div class="row">
+    <div class="text-center">
+        <img class="rounded" src="{% static 'images/fredo_pasta.jpeg' %}" alt="pasta" width="400">
+    </div>
+</div>
+    <div class="row">
+    <div class ="col-6">
+        <p class ="display-6 m-5 text-secondary">Classic American Cheeseburger</p>
+    </div>
+    <div class = "col-6">
+        <p class ="display-6 m-5 text-secondary"><i>............................$8.00</i></p>
+    </div>
+</div>
+    <div class="row">
+    <div class ="col-6">
+        <p class ="display-6 m-5 text-secondary">Stir-Fry Mania</p>
+    </div>
+    <div class = "col-6">
+        <p class ="display-6 m-5 text-secondary"><i>............................$12.00</i></p>
+    </div>
+</div>
+     <div class="row">
+    <div class="text-center">
+        <img class="rounded" src="{% static 'images/stir_fry.jpeg' %}" alt="stirfry" width="400">
+    </div>
+</div>
+    <div class="row">
+    <div class ="col-6">
+        <p class ="display-6 m-5 text-secondary">Steak Kabobs</p>
+    </div>
+    <div class = "col-6">
+        <p class ="display-6 m-5 text-secondary"><i>............................$15.00</i></p>
+    </div>
+</div>
+       <div class="row">
+    <div class ="col-6">
+        <p class ="display-6 m-5 text-secondary">Wacko Tacos</p>
+    </div>
+    <div class = "col-6">
+        <p class ="display-6 m-5 text-secondary"><i>............................$10.00</i></p>
+    </div>
+</div>
+    <div class="row">
+    <div class="text-center">
+        <img class="rounded" src="{% static 'images/tacos.jpeg' %}" alt="tacos" width="400">
+    </div>
+</div>
+
+    <!--------DESSERTS--------->
     <h3 id="desserts" class="display-2 text-center m-5">Desserts</h3>
+    <div class="col">
+<p class ="display-6 m-5 text-center text-secondary"><i>Desserts are served with vanilla icecream</i></p>
+</div>
+    <div class="row">
+    <div class ="col-6">
+        <p class ="display-6 m-5 text-secondary">Strawberry Shortcake Croissant</p>
+    </div>
+    <div class = "col-6">
+        <p class ="display-6 m-5 text-secondary"><i>............................$6.00</i></p>
+    </div>
+</div>
+    <div class="row">
+    <div class="text-center">
+        <img class="rounded" src="{% static 'images/lava_cake.jpeg' %}" alt="lava cake" width="400">
+    </div>
+</div>
+  <div class="row">
+    <div class ="col-6">
+        <p class ="display-6 m-5 text-secondary">Flowing Lava Cake</p>
+    </div>
+    <div class = "col-6">
+        <p class ="display-6 m-5 text-secondary"><i>............................$7.00</i></p>
+    </div>
+</div>
+
+
 {% endblock %}
+
 {% block script %}
 <script src="{% static 'javascript/menu.js' %}"></script>
 <script src ="{% static 'javascript/jquery-3.6.0.min.js' %}"></script>
